@@ -12,10 +12,8 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello from Express!");
-});
-
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
-});
+app.get("/", (req, res) => res.send("Mane is Quintus"));
+app.get("/user", (req, res) =>
+  res.json({ name: "John", age: 20, email: "jbenimana5@gmail.com" })
+);
+app.listen(3000, () => console.log("My name"));
