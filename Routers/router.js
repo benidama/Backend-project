@@ -55,4 +55,20 @@ router.get("/:id", (req, res) => {
   res.status(200).json(user);
 });
 
+//create new user
+router.post("/", (req, res) => {
+  const newUser = {
+    id: users.length + 1,
+    name: req.body.name,
+    age: req.body.age,
+    email: req.body.email,
+    password: req.body.password,
+  };
+  if (!newUser.name) {
+    return res.status(404).json(`mssg: New error`);
+  }
+  users.push(newUser);
+  res.status(200).json(users);
+});
+
 module.exports = router;
