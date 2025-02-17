@@ -13,10 +13,12 @@
 
 //express
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
-const users = require("./Routers/router");
+const posts = require("./Routers/router");
 
-const app = express();
+// const app = express();
+
 // const port = process.env.PORT || 5000;
 
 //Connect files
@@ -29,8 +31,11 @@ const app = express();
 // app.get("/about", (req, res) =>
 //   res.sendFile(path.join(__dirname, "public", "about.html"))
 // );
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 //router
-app.use("/api/user", users);
+app.use("/api/posts", posts);
 
 app.listen(8000, () => console.log("My name is Quintus"));
