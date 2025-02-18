@@ -1,4 +1,5 @@
 const express = require("express");
+// const { default: logger } = require("../middleware/middle");
 const router = express.Router();
 
 // let users = [
@@ -44,6 +45,10 @@ const posts = [
   {
     id: 3,
     name: "Kanuma",
+  },
+  {
+    id: 4,
+    name: "Kamali",
   },
 ];
 

@@ -16,6 +16,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const posts = require("./Routers/router");
+const router = require("./Routers/router");
 
 // const app = express();
 
@@ -33,7 +34,9 @@ const posts = require("./Routers/router");
 // );
 const app = express();
 app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+app.use(router);
 
 //router
 app.use("/api/posts", posts);
