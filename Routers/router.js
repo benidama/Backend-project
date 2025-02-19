@@ -40,15 +40,19 @@ const posts = [
   },
   {
     id: 2,
-    name: "Kanuma",
+    name: "John",
   },
   {
     id: 3,
-    name: "Kanuma",
+    name: "Joni",
   },
   {
     id: 4,
     name: "Kamali",
+  },
+  {
+    id: 5,
+    name: "Anna",
   },
 ];
 
